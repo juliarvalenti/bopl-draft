@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add SF Arch Rival from public folder */
+@font-face {
+  font-family: "SF Arch Rival";
+  src: url("/SF Arch Rival.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SF Arch Rival";
+  src: url("/SF Arch Rival Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "SF Arch Rival";
+  src: url("/SF Arch Rival Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Arch Rival";
+  src: url("/SF Arch Rival Bold Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Add SF Arch Rival as variable */
+:root {
+  --font-arch-rival: "SF Arch Rival", sans-serif;
+}
+
+/* A class which adds a repeating circle background pattern */
+.bg-pattern {
+  background-image: radial-gradient(
+    ellipse at center,
+    #a4ddfc 0%,
+    #a4ddfc 50%,
+    transparent 30%
+  );
+  background-size: 10rem 10rem;
+}
+
+/* A class which adds a linear graident background from transparent at the top to light blue at the bottom */
+.bg-gradient {
+  background-image: linear-gradient(to bottom, transparent, #499cf9);
+}
+
+/* A class which adds a cloud vignette effect around the container */
+.bg-vignette {
+  background-image: radial-gradient(
+    circle,
+    transparent 40%,
+    rgba(255, 255, 255, 0.25) 100%
+  );
+}
+
+/* CSS Animation gentle back and forth swaying */
+@keyframes sway {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  33% {
+    transform: rotate(2deg) scale(1.02);
+  }
+  66% {
+    transform: rotate(-2deg) scale (0.98);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.sway {
+  animation: sway 5s infinite ease-in-out;
+}
